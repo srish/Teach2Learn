@@ -3,9 +3,16 @@
 .container{
     width: 95%;
 }
+
+.navigation-container .title-row{
+    height:50%;
+}
+
+.navigation-container .navigation-row{
+}
+
 .panel-container{
     height: 85%;
-    border: 1px solid black;
 }
 
 .panel-row{

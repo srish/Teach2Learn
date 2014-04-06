@@ -4,11 +4,14 @@
     width: 95%;
 }
 
-.navigation-container .title-row{
-    height:50%;
+.navigation-container{
+    height:50px;
+    background-color:gray;
+    border:1px solid black;
 }
 
 .navigation-container .navigation-row{
+    height:100%;
 }
 
 .panel-container{
@@ -24,10 +27,4 @@
     height: 100%;
     margin-bottom: 0px;
     background-color: gray;
-}
-
-.navigation-container{
-    height:10%;
-    background-color:gray;
-    border:1px solid black;
 }

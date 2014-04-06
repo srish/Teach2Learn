@@ -1,0 +1,26 @@
+/* CSS for the index page */
+
+.container{
+    width: 95%;
+}
+.panel-container{
+    height: 85%;
+    border: 1px solid black;
+}
+
+.panel-row{
+    height: 50%;
+}
+
+.panel {
+    border: 1px solid black;
+    height: 100%;
+    margin-bottom: 0px;
+    background-color: gray;
+}
+
+.navigation-container{
+    height:10%;
+    background-color:gray;
+    border:1px solid black;
+}

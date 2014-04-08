@@ -5,13 +5,79 @@
 }
 
 .navigation-container{
-    height:50px;
-    background-color:gray;
-    border:1px solid black;
+    height:70px;
+    background-color:white;
 }
 
-.navigation-container .navigation-row{
+.navigation-row, .navigation-row > div{
     height:100%;
+}
+
+.navigation-row > div{
+    border:solid 1px black;
+}
+
+.navigation-container .logo h5{
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.navigation-row .navigation{
+    border-left:none;
+    border-right:none;
+}
+
+.navigation ul{
+    height: 100%;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.navigation ul li{
+    display:block;
+    width:25%;
+    float:left;
+    text-align:center;
+    padding-top:5px;
+    margin-left:0;
+}
+
+#navigation .lines{
+    position: absolute;
+    width: 95%;
+}
+
+#navigation hr{
+    width: 75%;
+    border-width: 7px;
+}
+
+#navigation span{
+    display:block;
+    margin:auto;
+    color:#ebebeb;
+}
+
+#navigation span .fa-inverse{
+    color:#2f75b4;
+    text-shadow:none;
+}
+
+#navigation li.current span{
+    color: #2f75b4;
+}
+
+#navigation li.current .fa-inverse{
+    color:white;
+}
+
+.navigation-row .next-lesson button{
+    margin-top: 15px;
+    width: 100%;
+}
+
+#handshake-button{
+    display:none;
 }
 
 .panel-container{
@@ -26,12 +92,6 @@
     border: 1px solid black;
     height: 100%;
     margin-bottom: 0px;
-    background-color: gray;
-}
-
-.navigation-container{
-    background-color:gray;
-    border:1px solid black;
 }
 
 body {
@@ -59,6 +119,23 @@ h3 {
     font-variant: small-caps;
     text-transform: lowercase;
     letter-spacing: 2px;
+}
+
+.btn, .btn:focus{
+    background-color: #2f75b4;
+    color: white;
+    border: 1px solid #2f75b4;
+}
+
+.btn:hover{
+    text-decoration: none;
+    color: #2f75b4;
+    background-color: #ebebeb;
+    border:none;
+}
+
+.btn:focus{
+    outline-width:0;   
 }
 
 a:link, a:visited, a:active {

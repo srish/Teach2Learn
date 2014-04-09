@@ -1,0 +1,16 @@
+#content-panel {
+    overflow:auto;
+}
+
+#content-panel > div{
+    display: none;
+}
+
+#content-panel .current{
+    display: block;
+}
+
+#content-panel p{
+    padding: 0 50px 20px 50px;
+    
+}

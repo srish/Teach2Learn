@@ -67,7 +67,8 @@
 
 #navigation .lines{
     position: absolute;
-    width: 95%;
+    width: 96%;
+    left: 2%;
 }
 
 #navigation hr{

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
  
-Teach2Learn Computer Protype
+Teach2Learn Computer Prototype
 
-Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Sruthi
+Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
 
 -->
 <html lang="en">
@@ -22,11 +22,15 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Sruthi
         
         <!-- Fontawesome CSS -->
         <link rel="stylesheet" href="../external/font-awesome/css/font-awesome.min.css">
+
         
         <!-- Custom styles for this template -->
         <link href="css/cover.css"   rel="stylesheet">
         <link href="css/index.css"   rel="stylesheet">
         <link href="css/content.css" rel="stylesheet">
+
+        <!-- Link to the Drawing Board CSS File -->
+        <link href="css/drawingboard.min.css" rel="stylesheet">
         
     </head>
 
@@ -82,7 +86,9 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Sruthi
     <div class="container panel-container">
         <div class="row panel-row">
             <div class="col-md-6 panel">Webcam Goes Here</div>
-            <div class="col-md-6 panel">Workspace</div>
+            <div class="col-md-6 panel">
+                <div id="board"></div>
+            </div>
         </div>
         <div class="row panel-row">
             <div class="col-md-6 panel" id="content-panel">
@@ -122,5 +128,7 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Sruthi
     <script src="../external/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/content.js"></script>
+    <script src="js/drawingboard.min.js"></script>
+
 </body>
 </html>

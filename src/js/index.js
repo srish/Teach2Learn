@@ -25,5 +25,7 @@ $(function() {
         nextContent.toggleClass('current');
         
     });
-    
+
+    // Creating a Drawing Board
+    var myBoard = new DrawingBoard.Board('board');
 });

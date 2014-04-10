@@ -25,6 +25,14 @@ $(function() {
         nextContent.toggleClass('current');
         
     });
+    
+    $('#handshake-button').on('click', function(){
+        $('.completion-container').show();
+    });
+    
+    $('#return-to-board-button').on('click', function(){
+        $('.completion-container').hide();
+    });
 
     // Creating a Drawing Board
     var myBoard = new DrawingBoard.Board('board');

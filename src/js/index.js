@@ -45,7 +45,7 @@ $(function() {
 
     $('#video-2').on('click', function() {
         $('.video-capture-max').attr("src", "static/google-hangout-2.jpg");
-
+        
         $('#video-2').addClass("video-border");
         $('#video-1').removeClass("video-border");
         $('#video-3').removeClass("video-border");
@@ -60,5 +60,8 @@ $(function() {
     });
 
     // Creating a Drawing Board
-    var myBoard = new DrawingBoard.Board('board');
+    var myBoard = new DrawingBoard.Board('board', {
+        color: '#2f75b4',
+    });
+
 });

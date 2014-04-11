@@ -34,6 +34,31 @@ $(function() {
         $('.completion-container').hide();
     });
 
+    $('#video-1').on('click', function() {
+        $('.video-capture-max').attr("src", "static/google-hangout-1.png");
+
+        $('#video-1').addClass("video-border");
+        $('#video-2').removeClass("video-border");
+        $('#video-3').removeClass("video-border");
+
+    });
+
+    $('#video-2').on('click', function() {
+        $('.video-capture-max').attr("src", "static/google-hangout-2.jpg");
+
+        $('#video-2').addClass("video-border");
+        $('#video-1').removeClass("video-border");
+        $('#video-3').removeClass("video-border");
+    });
+
+     $('#video-3').on('click', function() {
+        $('.video-capture-max').attr("src", "static/google-hangout-3.jpg");
+
+        $('#video-3').addClass("video-border");
+        $('#video-1').removeClass("video-border");
+        $('#video-2').removeClass("video-border");
+    });
+
     // Creating a Drawing Board
     var myBoard = new DrawingBoard.Board('board');
 });

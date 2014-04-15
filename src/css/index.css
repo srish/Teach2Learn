@@ -40,17 +40,23 @@
     border:solid 1px black;
 }
 
-.navigation-container .logo h5{
-    font-size: 25px;
-    padding-top: 10px;
+.navigation-container .logo{
+    overflow:hidden;
+}
+
+.navigation-container .logo img{
+    width: 200px;
+    margin-top: 13px;
 }
 
 .navigation-row .navigation{
     border-left:none;
     border-right:none;
+    overflow: auto;
 }
 
 .navigation ul{
+    width: 3080px;
     height: 100%;
     margin-bottom: 0;
     padding-left: 0;
@@ -58,7 +64,7 @@
 
 .navigation ul li{
     display:block;
-    width:25%;
+    width:220px;
     float:left;
     text-align:center;
     padding-top:5px;
@@ -67,12 +73,12 @@
 
 #navigation .lines{
     position: absolute;
-    width: 96%;
+    width: inherit;
     left: 2%;
 }
 
 #navigation hr{
-    width: 75%;
+    width: 93%;
     border-width: 7px;
 }
 
@@ -87,12 +93,20 @@
     text-shadow:none;
 }
 
+#navigation li span:hover{
+    cursor:pointer;
+    color: #2f75b4;
+}
 #navigation li.current span{
     color: #2f75b4;
 }
 
-#navigation li.current .fa-inverse{
+#navigation li.current .fa-inverse, #navigation li .fa-inverse:hover{
     color:white;
+}
+
+#navigation li.current span:hover{
+    cursor:default;
 }
 
 .navigation-row .next-lesson button{

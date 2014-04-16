@@ -28,8 +28,7 @@
 }
 
 .navigation-container{
-    height:70px;
-    background-color:white;
+    height:85px;
 }
 
 .navigation-row, .navigation-row > div{
@@ -46,7 +45,8 @@
 
 .navigation-container .logo img{
     width: 200px;
-    margin-top: 13px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .navigation-row .navigation{
@@ -109,11 +109,6 @@
     cursor:default;
 }
 
-.navigation-row .next-lesson button{
-    margin-top: 15px;
-    width: 100%;
-}
-
 #handshake-button{
     display:none;
 }
@@ -169,6 +164,7 @@ h3 {
     background-color: #2f75b4;
     color: white;
     border: 1px solid #2f75b4;
+    vertical-align: middle;
 }
 
 .btn:hover{
@@ -181,6 +177,11 @@ h3 {
 .btn:focus{
     outline-width:0;   
 }
+
+.nav_btn{
+    width: 100%;
+}
+
 
 a:link, a:visited, a:active {
     color: #2f75b4;

@@ -37,6 +37,7 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
     </head>
 
 <body>
+    <!-- completion container is hidden initially-->
     <div class="completion-container">
         <div class="completion-dialogue">
             <h4>Congratulations!</h4>
@@ -46,10 +47,12 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
     </div>
     <div class="container navigation-container">
         <div class="row navigation-row">
-            <div class="col-md-2 logo">
-                <image src="static/Teach2LearnLogo.PNG"></image>
+            <div class="col-md-2 logo panel">
+                <div class="panel_wrapper">
+                    <image src="static/Teach2LearnLogo.PNG"></image>
+                </div>
             </div>
-            <div class="col-md-8 navigation" id="navigation">
+            <div class="col-md-8 navigation panel" id="navigation">
                 <ul class = "nav nav-pills">
                     <div class="lines"><hr></div>
                     <li class="current">
@@ -152,13 +155,15 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
                     </li>
                 </ul>
             </div>
-            <div class="col-md-2 next-lesson">
-                <button class="btn" id="next-lesson-button">
-                    Next Task <i class="fa fa-arrow-circle-right"></i>
-                </button>
-                <button class="btn" id="handshake-button">
-                    Handshake <i class="fa fa-thumbs-o-up"></i>
-                </button>
+            <div class="col-md-2 next-lesson panel">
+                <div class="panel_wrapper">
+                    <button class="btn nav_btn" id="next-lesson-button">
+                        Next Task <i class="fa fa-arrow-circle-right"></i>
+                    </button>
+                    <button class="btn nav_btn" id="handshake-button">
+                        Handshake <i class="fa fa-thumbs-o-up"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@
 }
 
 .navigation-container{
-    height:85px;
+    height:90px;
 }
 
 .navigation-row, .navigation-row > div{
@@ -210,24 +210,6 @@ a:hover {
     overflow: auto;
 }
 
-.video-mini-col .video-capture-mini {
-    margin-left: -30px;
-    width: 167px;
-}
-
-.video-max-col .video-capture-max {
-    margin-left: 50px;
-    width: 430px;
-    height: 240px;
-}
-
-.video-controls {
-    width: 430px;
-    margin-left:180px;
-    margin-top: 15px;
-    color: #2f75b4;
-    font-size: 20px;
-}
 
 .fa-fw {
     margin-left: 5px;
@@ -236,3 +218,21 @@ a:hover {
 .video-border {
     border: 5px solid #2f75b4;
 }
+
+/* Marcus Video Changes */
+
+#video {
+    width: 80%;
+}
+#video-chooser {
+    width: 20%;
+}
+#video img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#video-chooser img {
+    width: 100%;
+}
+

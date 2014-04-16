@@ -19,8 +19,6 @@ $(function() {
         var next = $($('#navigation li').get(taskNum - 1));
         var nextContent = $($('#content-panel .lesson').get(taskNum - 1));
         
-        console.log(nextContent);
-        
         // If we are going to the last lesson point
         if(!next.next().prop('tagName')){
             // Switch the button to a handshake button.
@@ -54,12 +52,15 @@ $(function() {
         scrollTo(nextTaskNum);
     });
     
-    // Going to a specific lesson point
-    $('#navigation li:not(".current") .fa').on('click', function(event){
-        console.log($(event.target).parent().parent().index());
-        
-        var taskNum = $(event.target).parent().parent().index();
-        goToTask(taskNum);
+    $('#navigation li .fa').on('click', function(){
+        // If the parent container is already selected, we do not do anything
+        if($(event.target).parent().parent().hasClass('current')){
+            return;
+        }
+        else{
+            var taskNum = $(event.target).parent().parent().index();
+            goToTask(taskNum);
+        }
     });
     
     $('#handshake-button').on('click', function(){

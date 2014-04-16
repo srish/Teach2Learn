@@ -25,3 +25,11 @@
     width: 20px;
     text-align: center;
 }
+
+#bookshelf_hidden {
+    display: none;
+}
+
+.bookshelf_match {
+    //color:#2f75b4;
+}

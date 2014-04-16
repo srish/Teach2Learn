@@ -86,6 +86,9 @@ function drawDocuments(docs, search_result) {
         }
         var $second_col = $('<td/>').html(display_title).appendTo($row);
     }
+    if (search_result && !docs.length) {
+        $table.append('<tr><td class="icon_col"></td><td>No matches found</td></tr>');
+    }
 }
 
 // Draw all documents initially
@@ -93,7 +96,7 @@ drawDocuments([0, 1, 2, 3], false);
 
 // Setup search listener
 $('#bookshelf_search').typing({
-    delay: 400,
+    delay: 100,
     stop: function () {
         var query = $('#bookshelf_search').val();
         if (query == '') {

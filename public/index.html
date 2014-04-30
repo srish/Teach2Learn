@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<!--
+ 
+Teach2Learn Computer Prototype
+
+Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+        
+        <title>Teach2Learn GR4 Computer Prototype</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="../external/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Link to the Drawing Board CSS File -->
+        <link href="../external/drawingboard/drawingboard.min.css" rel="stylesheet">
+        
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="../external/font-awesome/css/font-awesome.min.css">
+
+        
+        <!-- Custom styles for this template -->
+        <link href="css/cover.css"   rel="stylesheet">
+        <link href="css/index.css"   rel="stylesheet">
+        <link href="css/content.css" rel="stylesheet">
+
+        <!-- Link to the Bookshelf CSS File -->
+        <link href="css/bookshelf.css" rel="stylesheet">
+        
+    </head>
+
+<body>
+    <!-- completion container is hidden initially-->
+    <div class="completion-container">
+        <div class="completion-dialogue">
+            <h4>Congratulations!</h4>
+            <p>You have finished the task.</p>
+            <button class="btn" id="return-to-board-button">Return to Board</button>
+        </div>
+    </div>
+    <div class="container navigation-container">
+        <div class="row navigation-row">
+            <div class="col-md-2 logo panel">
+                <div class="panel_wrapper">
+                    <image src="static/Teach2LearnLogo.PNG"></image>
+                </div>
+            </div>
+            <div class="col-md-8 navigation panel" id="navigation">
+                <ul class = "nav nav-pills">
+                    <div class="lines"><hr></div>
+                    <li class="current">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">1</i>
+                        </span>
+                        Introduction
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">2</i>
+                        </span>
+                        What is Design Thinking?
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">3</i>
+                        </span>
+                        Business Thinking vs. Design...
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">4</i>
+                        </span>
+                        The User Centered Design Process
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">5</i>
+                        </span>
+                        Interactive Case Study
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">6</i>
+                        </span>
+                        Step 1: Define the Problem...
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">7</i>
+                        </span>
+                        Step 2: Determine Stakeholders
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">8</i>
+                        </span>
+                        Preview of Homework
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">9</i>
+                        </span>
+                        Preview of next lesson
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">10</i>
+                        </span>
+                        Assesment
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">11</i>
+                        </span>
+                        Reflection on Learning
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">12</i>
+                        </span>
+                        Teaching Preview
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">13</i>
+                        </span>
+                        Feedback
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-inverse fa-stack-1x">14</i>
+                        </span>
+                        Handshake
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 next-lesson panel">
+                <div class="panel_wrapper">
+                    <button class="btn nav_btn" id="next-lesson-button">
+                        Next Task <i class="fa fa-arrow-circle-right"></i>
+                    </button>
+                    <button class="btn nav_btn" id="handshake-button">
+                        Handshake <i class="fa fa-thumbs-o-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="container panel-container">
+        <div class="row panel-row">
+            <div class="col-md-6 panel">
+                <div class="panel_wrapper">
+                    <div id="video-chooser" class="col-md-2">
+                        <img id="video-1" class="video-capture-mini video-border" src="static/google-hangout-1.png"><br/>
+                        <img id="video-2" class="video-capture-mini" src="static/google-hangout-2.jpg" ><br/>
+                        <img id="video-3" class="video-capture-mini" src="static/google-hangout-3.jpg">
+                    </div>
+                    <div id="video" class="col-md-4">
+                        <img class="video-capture-max" src="static/google-hangout-1.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 panel">
+                <div class="panel_wrapper">
+                    <div id="board"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row panel-row">
+            <div class="col-md-6 panel">
+                <div class="panel_wrapper" id="content-panel">
+                    <div class="lesson current">
+                        <h2>Introduction</h2>
+                        <ol>
+                            <li>
+                                Overall course structure ‚Äì 2 lessons, learning by teaching model, learning by teaching lesson structure (lesson + 5 parts of reflection).
+                            </li>
+                            <li>
+                                Learning objectives
+                                <ul>
+                                    <li>Introduce Design Thinking concept and process</li>
+                                    <li>Conduct part 1 of Design Thinking case</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Caveat: a side purpose is to test the learning by teaching model
+                            </li>
+                            <li>
+                                Expectations: take notes, homework will be to watch a 2 minute video and reflect on it
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>What is Design Thinking?</h2>
+                        <ol>
+                            <li>Read statement and stress the fact that is about people and process</li>
+                            <li>State that Design Thinking = User Centered Design</li>
+                            <li>Ask questions:</li>
+								<ul>
+									<li>What might the steps be in this process?</li>
+									<li>How might this differ from a traditional business process?</li>
+									<li>What might this process be used for?</li>
+								</ul>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Business Thinking vs. Design Thinking</h2>
+                        <ol>
+                            <li>Go through Swiffer case: <a href='http://continuuminnovation.com/work/swiffer/' target="_blank">link</a></li>
+                            <li>Describe how business thinking differs from what Continuum did when redesigning the mop</li>
+                            <li>Discuss how business and design thinking don't have to be mutually exclusive, but it's where the focus/emphasis lies in the process</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>The User Centered Design Process</h2>
+                        <ol>
+                            <li>Briefly talk through each of the six steps of the user-centered design process and offer to answer clarifying questions</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Interactive Case Study</h2>
+                        <ol>
+                            <li>Describe how the tutee will be going through an actual design thinking case study</li>
+							<li>Read background: You have been hired by electronic accessories company, Belkin, to apply design thinking to develop a new product."</li>
+							<li>Read problem statement: Our customers who are on-the-go hate dealing with device cables (laptops, tablets, phones, etc.). We want a solution to make it easier for customers to manage these cords.</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Step 1: Define the Problem Statement</h2>
+                        <ol>
+                            <li>Have the tutee write a new problem statement that is broad enough to capture all possible opportunity areas ‚Äì reread given problem statement</li>
+                            <li>Discuss how a problem statement can be analyzed and read the example redefined problem statement
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Step 2: Determine Stakeholders</h2>
+                        <ol>
+                            <li>Have the tutee think of types of people that may face the issues described in the problem statement</li>
+                            <li>Have the tutee write these down (or ideally draw them) and describe each persona and the needs of the persona</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Preview of Homework</h2>
+                        <ol>
+                            <li>Tell the tutee to watch the video (youtu.be/_MIt4q-gZno) and observe the pain points of the user</li>
+                            <li>Tell the tutee to generate ‚Äúhelp me‚Äù statements based on the specific pain points observed in the video</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Preview of next lesson</h2>
+                        <ol>
+                            <li>Tell the tutee that the next lesson will start by discussing the video and help me statement, and then it will cover ideation and prototyping</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Assessment</h2>
+                        <ol>
+                            <li>Describe the difference between Business Thinking and Design Thinking</li>
+                            <li>Describe the six steps of the Design Thinking process</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Reflection on Learning</h2>
+                        <ol>
+                            <li>Can you reflect back on how you learned what you learned? How was the lesson taught?</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Teaching Preview</h2>
+                        <ol>
+                            <li>Can you walk me through how you would teach this lesson?</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Feedback</h2>
+                        <ol>
+                            <li>Do you have any feedback for me or for how the lesson can be improved for the future?</li>
+                        </ol>
+                    </div>
+                    <div class="lesson">
+                        <h2>Handshake</h2>
+                        <ol>
+                            <li>Consider: Is the student ready to teach?  </li>
+                            <li>Say, ‚ÄúI will get back to you on these X questions‚Ä¶‚Äù</li>
+                            <li>Ask the student: Do you feel comfortable enough to move forward, develop a lesson plan, and eventually teach this?</li>
+                            <li>Ask the student: Do you think I‚Äôve done a fair job of teaching you?</li>
+                            <li>Next steps: ‚ÄúAs you know, you will be teaching XX next, and you will need to run through this same reflection process at the end to ensure he is able to teach it forward as well. So please provide your lesson plan to me by XX time. I will give you feedback on it and access to all the other material. In addition, feel free to reach out to me if you have any further questions.‚Äù</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 panel">
+                <div class="panel_wrapper">
+                    <input id="bookshelf_search" type="text" placeholder="Search Reference Materials"></input>
+                    <table id="bookshelf_table">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Hidden bookshelf content (normally loaded in through AJAX -->
+<div id="bookshelf_hidden">
+<div id="doc1">
+Design Thinking
+Lesson 1
+What is Design Thinking?
+User Centered
+Design
+A process of understanding people and
+designing for them
+What might the steps be in this process?
+How might this differ from a traditional business process?
+What might this process be used for?
+How would you Redesign a Mop?
+(p.s The Swiffer is a real example of a product designed by design firm Continuum!)
+Business Thinking
+Compare existing mops
+Design Thinking
+Maximize cost savings
+Optimize logistics
+Observe people mopping
+Identify their pain points
+Address these pain points
+{ìspreadsheets & precedentsî} {ìpeople & innovationî}
+The User Centered Design Process
+Define
+Problem Statement
+Determine
+Stakeholders
+Observe/Interact;
+Speak with Stakeholders
+Debrief and Generate
+Help Me Statements
+Ideate to Address
+these Pain Points
+Prototype, Test
+in the Field, Iterate
+1. 2. 3.
+4. 5. 6.
+Getting Rid of Cables: An Example
+Background: You have been hired by electronic accessories company,
+Belkin, to apply design thinking to develop a new product.
+Problem Statement: Our customers who are on-the-go hate dealing
+with device cables (laptops, tablets, phones, etc.). We want a solution
+to make it easier for customers to manage these cords.
+Getting Rid of Cables: An Example
+Step 1
+Make the new statement broad enough to capture all opportunity areas
+Define the Problem Statement
+Given Problem Statement: Our customers who are on-the-go hate
+dealing with device cables (laptops, tablets, phones, etc.). We want a
+solution to make it easier for customers to manage these cords.
+New Problem Statement:
+Getting Rid of Cables: An Example
+Step 1
+Make the new statement broad enough to capture all opportunity areas
+Define the Problem Statement
+ìHow can Belkin help on-the-go device users keep their devices easily
+accessible and ready when needed throughout the day.î
+Getting Rid of Cables: An Example
+Step 2
+Begin to develop personas that encompass the pain points
+Determine Stakeholders
+Define stakeholders, a description/image of each,
+and their needs
+Getting Rid of Cables: An Example
+Step 2
+Begin to develop personas that encompass the pain points
+Determine Stakeholders
+Sam needs to manage his devices on-the-go, quickly swapping things in and out
+Carl needs to efficiently set up his devices once he arrives at the hotel or office
+For Lesson 2
+Getting Rid of Cables: An Example
+Step 3
+Observe stakeholders and speak with them about their experience
+Observe/Interact; Speak with Stakeholders
+Walk in their footsteps to experience their pain points firsthand
+What are the specific areas of frustration or inefficiencies?
+Watch clip: youtu.be/_MIt4q-gZno
+Getting Rid of Cables: An Example
+Step 4
+Turn the identified pain points into ìHelp Meî statements so that you
+have concrete direction to begin generating ideas
+Debrief and Generate Help Me Statements
+</div>
+
+<div id="doc2">
+Excerpts from ìThe Perfect Brainstormî
+Tom Kelley with Jonathan Littman, from The Art of Innovation
+
+ìThe best way to get a good idea is to get a Lot of ideas.î  óó LINUS PAULING
+
+The problem with brainstorming is that everyone thinks they already do it. When I raise the topic of brainstorming in presentations conversations with business executives, I see some eyes start to glaze over with the smug "been there, done that" look of someone who already answered "yes" to the question "Do you brainstorm?" In fact, more than 70 percent of the businesspeople in a recent Arthur Andersen survey say they use brainstorming in their organizations.
+
+Many businesspeople treat brainstorming as a check box, a threshold variable, like "Can you ride a bicycle?" or "Do you know how to tie your shoes?" They overlook the possibility that brainstorming can be a skill, an art, more like playing the piano than tying your shoes. You're always learning and can get continuously better. You can become a Brainstorming virtuoso. You can have heads of giant corporations and of government fly in to ask for your brainstorming help. (Don't laugh. I've seen it with my own eyes.)
+
+So if you say you already do brainstorming in your organization, great, you're on your way. But I believe you can deliver more value, create more energy, and foster more innovation through better brainstorming. For one thing, you could brainstorm more often, weaving it into the cultural fabric of your organization. In that same Arthur Andersen survey of people who said they brainstorm, 76 percent admitted they brainstorm less than once a month. Less than once a month. I consider myself a movie fan, usually seeing thirty to forty films a year on the big screen (plus again as many on video), but if I dropped below one a month, I'd have to say I was a former fan. If you want to keep in shape, you have to exercise your brainstorming muscles more than once a month. So find a suitable space, order some supplies (and some chocolate chip cookies), get a good group together, and brainstorm up several dozen possible solutions to a problem that's bugging you right now. 
+
+Brainstorming is practically a religion at IDEO, one we practice nearly every day. Though brainstorms themselves are often playful, brainstorming as a toolóas a skillóis taken quite seriously. And in a company without many rules, we have a very firm idea about what constitutes a brainstorm and how it should be organized. First, a brainstorm is not a regular meeting. It's not something you take notes at. You don't take turns speaking in any orderly way. It shouldn't consume a morning or an afternoon. Sixty minutes seems to be the optimum length, in our experience, though occasionally a brainstorm can productively stretch to an hour and a half. 
+
+Brainstorming is the idea engine of IDEO's culture. It's an opportunity for teams to "blue sky" ideas early in a project or to solve a tricky problem that's cropped up later on. The more productive the group, the more it brainstorms regularly and effectively. We call the sessions "brainstormers," which to us sounds more like an active, engaging event. The buzz of a good brainstormer can infect a team with optimism and a sense of opportunity that can carry it through the most pressure-tinged stages of a project.
+So what makes a brainstormer sing? Most people are familiar with the fundamentalsólike sticking to one conversation at a time and building on the ideas of othersóbut it takes extra effort if you want a great brainstormer with valuable results.
+
+SEVEN SECRETS FOR BETTER BRAINSTORMING
+
+1.  SHARPEN THE FOCUS
+Good brainstormers start with a well-honed statement of the problem. This can be as simple as a question. Edgy is better than fuzzy. The session will get off to a better startóand you can bring people back into the main topic more easilyóif you have a well-articulated description of the problem at just the right level of specificity. A brainstormer without a clear problem statement is like a company without a clear strategy: You'll wander aimlessly and need a lot of extra luck or talent to succeed. If you find yourself leading a session that lacks direction, spend a few minutes developing a good problem statement. It will be time well spent. For example, "spill-proof coffee cup lids" would be a bad brainstorming topic because it's too narrow and already presumes you know the answer. Another approach, "bicycle cup holders," is too dry and product-focused. Maybe bicyclists shouldn't use cups at all, in which case they certainly don't need cup holders. A better, more open-ended topic would be "helping bike commuters to drink coffee without spilling it or burning their tongues." Go for something tangible that participants can sink their teeth into, without limiting the possible solutions.
+
+We've also found that the best topic statements focus outward on a specific customer need or service enhancement rather than focusing inward on some organizational goal. For example, topics like "How can we regain market share from Company X?" or "How can we build a better search engine than Company Y?" may not lend themselves to innovations that will be embraced by the market. On the other hand, a series of more specific, customer-focused brainstorms on topics like "How can we accelerate the time-to-first-result for customers searching via dial-up modems" could uncover innovations that might yield the competitive edge you seek.
+
+2.  PLAYFUL RULES 
+Don't start to critique or debate ideas. It can sap the energy of the session pretty quickly. You need a way to turn aside critiques without turning off the critiquers completely. At IDEO many of our conference rooms have brainstorming rules stenciled in six-inch-high letters on the walls, for example, "Go for quantity," "Encourage wild ideas," or "Be visual." Not willing to mark up your walls? Perhaps the facilitator could ring a bell when participants try to turn a brainstormer into a normal meeting. Or you could print the brainstorming rules on a giant Post-it or write them prominently on a whiteboard.
+
+3.  NUMBER YOUR IDEAS
+Numbering each idea is pretty obvious, right? So obvious that it took us almost ten years to figure it out. Numbering the ideas that bubble up in a brainstorm helps in two ways. First, it's a tool to motivate the participants before and during the session ("Let's try to get a hundred ideas, before we leave the room") or to gauge the fluency of a completed brainstorm. Second, it's a great way to jump back and forth from idea to idea without losing track of where you are. We've found that a hundred ideas per hour usually indicates a good, fluid brainstorming session. One hundred and fifty per hour is pushing the speed limit. 
+
+4.  BUILD AND JUMP
+Watch for chances to "build" and "jump." High-energy brainstormers tend to follow a series of steep "power" curves, in which momentum builds slowly, then intensely, then starts to plateau. The best facilitators can nurture an emerging conversation with a light touch in the first phase and know enough to let ideas flow during the steep part of the ideation curve. It's when energy fades on a line of discussion that the facilitator really earns his or her keep.
+In the coffee-while-bicycling brainstorm example above, a good "building" suggestion to keep up momentum might be: "Shock absorbers are a great idea; now, what are some other ways to reduce spillage when the bicycle hits a bump?" By contrast, when discussion tapers off, a good "jump" transition statement might be something like this: "OK, let's switch gears and consider some totally 'hands-free' solutions that allow the cyclist to keep both hands on the handlebars at all times. What might those solutions look like?"
+
+Try building on an idea. Encourage another push or introduce a small variation. Or take a jump, either back to an earlier path you skipped by too quickly or forward to a completely new approach. Whatever you do, try to get into the next power curve and keep the energy up.
+
+5. THE SPACE REMEMBERS
+Great brainstorm leaders understand the power of spatial memory. Write the flow of ideas down in a medium visible to the whole group. There are many emerging digital technologies for group work, but we have had great success with extremely low-tech tools like Sharpie markers, giant Post-its for the walls, and rolls of old-fashioned butchershop paper on the tables. Brainstorming is an intensely group-oriented process, and the facilitator's rapid scribing is one of the focal points that hold the group together. We're not talking about taking personal meeting notes here, but capturing ideas so that the group can see their progression and return to those that seem worthy of more attention. 
+
+Cover virtually every wall and flat surface with paper before the session starts. That way you won't find yourself in the awkward position of having to erase ideas to make room for more. And you may find there's a certain synergy in physically moving around the room writing down and sketching the ideas. As you rapidly capture the team's ideas, make a mental note of ones that are worth coming back to during a build or a jump. When you return to the spot on the wall where that idea was captured, spatial memory will help people recapture the mind-set they when the idea first emerged.
+
+6.  STRETCH YOUR MENTAL MUSCLES
+People are busy. Time is short. Is it worthwhile to "burn" some time at the beginning of a brainstorm doing some form of group warm-up? Maybe. But that "maybe" rapidly becomes a "yes" in certain circumstances:
+ï When the group has not worked together before
+ï When most of the group doesn't brainstorm frequently
+ï When the group seems distracted by pressing but unrelated issues
+One type of warm-up we practice is a fast-paced word game simply to clear the mind (Zen practitioners call it "beginner's mind") and to get the team into a more outgoing modeÖ
+
+Another warm-up is to do some content-related homework. At IDEO we did a systematic study a few years ago to measure the value of different brainstorming warm-up techniques. We divided our pool of participants into three groups and had them brainstorm on applications of specific new technologies to the toy industry.
+
+First we gave two of the groups homework. One group did some background reading and listened to an expert lecture on the technologies. Another group spent half an hour in a local toy store looking at the state of the art in all its variations. The third group came into the brainstorming session cold. Guess what? The group whose homework was a visit to a toy store significantly outperformed the other two, both in the quantity of ideas produced and in perceived qualityÖ.We now frequently bring "show-and-tell" to a brainstormer to help us visualize the wide variety of options and materials that can be applied to the session's topic.
+
+One of the best brainstormers I ever attended at IDEO was an exploration of alternative wine beverage containers. Before the brainstormer, we covered a conference table with bottles, closures, materials, and mechanisms ranging from the retro porcelain Grolsch beer bottle stopper to an elegant black Japanese sake flask. By the time we'd examined everything on the table, the session was already in full swing. We had hundreds of ideas before we were done, and a point of view on how to help our client innovate.
+
+7. GET PHYSICAL
+Good brainstorms are extremely visual. They include sketching, mind mapping, diagrams, and stick figures. You don't have to be an artist to get your point across with a sketch or diagram. Leave your performance anxieties at the door and jump in with whatever visual tools you have available.
+
+But the best brainstormers often get physical. We move beyond two dimensions and push for three. The first way we do this is to bring in everything but the kitchen sink (and we've brought the sink, too, when it was relevant). That means competitive products, elegant solutions from other fields, and promising technologies that could be applied to the problem. The second way we get physical is to have materials on hand to build crude models of a concept: blocks, foam core, tubing, duct tape, whatever might be useful. The third physical approach is "bodystorming," where we act out current behavior/usage patterns and see how they might be altered. 
+
+THE BRAINSTORMER EFFECT
+
+Hot brainstormers may generate a hundred or more ideas, ten of which may be solid leads. They can help put a team on course, and the rush of adrenaline can keep team members buzzing for days. There's a ripple effect. People talk after brainstormers, sharing wild or practical ideas that may have come out of a particularly vibrant session. A great brainstormer gives you a fantastic feeling of possibility, and an hour later you walk out of the room a little richer for the experience. I think that sense of spontaneous team combustion is why we've been able to find so many unusual solutions to seemingly intractable problems. For example, in designing the slim Dynabook laptop we discovered there wasn't enough room for traditional fasteners. A brainstormer generated the idea of "knitting" the two halves togetherólike a piano hingeówhich sent us out looking for a strong, thin rod threaded on one end. We eventually reached a solution by getting our favorite Palo Alto bike shop to supply custom spokes to Dynabook that, amazingly enough, did the trick.
+
+You can't quantify the value of letting people's minds run wild. At one brainstormer a few designers and engineers got the idea to motorize a swirling pencilóand made one on the spot. "We've struck gold!" somebody yelled out. We didn't follow up successfully on the whimsical toy. But a few years later, with or without our help, the Wigglewriter came to market and sold like hotcakes. A waste of time? Not in my book. It's the sort of incorrigible spirit of play that keeps team members in tune and on edge.
+
+I'm convinced that if you participate regularly in brainstormers, it's like stretching exercises for your mind. You approach problems differently than when you're at your desk or strolling the halls. When a client rejects a course of action, the two or three team members working on that specific aspect of the project don't slink off to their desks to mope. They'll put up chairs to the nearest table and hold a mini-brainstormer, maybe just fifteen or thirty minutes to find a new track.
+
+Brainstormers can do something else for your group. They offer the team members a chance to shine. It's friendly competition. Who doesn't want to demonstrate their cleverness and wittiness in front of their peers? And when a brainstormer thunders, it's a multiple win, a rising tide that lifts everyone up on a wave of excitement.
+
+Some people, of course, are better at brainstorming than others. And truth be told, your performance does matter. Pipe up in brainstormers, bang out a quick prototype, or solve a tricky technical ques-tion, and you'll rise in the eyes of your peers. If you've got an open style of innovationówith brainstormers, prototyping, and problem solvingóyou'll naturally favor those who take action. It's true, "hot groups" aren't a place for shrinking violets. When a newcomer starts peppering a brainstormer with cool ideas, we take notice. You earn respect and authority in that week's brainstormer or on today's prototype team.
+
+Unfortunately, we all occasionally fall victim to negativity. The coach who hammers too hard on the fumbling player, the teacher who corrects the flub and fails to praise the insight. Without a comfort zone, people don't take chances. If you're going to do a lot of brainstorming, there are several other pitfalls to watch out for.
+
+SIX  WAYS  TO KILL A  BRAINSTORMER
+
+A brainstormer is a terrible thing to waste.  Here are six surefire ways to kill a brainstormer.
+
+1. THE BOSS GETS TO SPEAK FIRST
+If the boss gets first crack, then he's going to set the agenda and the boundaries, and your brainstormer is immediately limited. I know one Silicon Valley boss who eagerly launched a brainstorm saying he was looking for some great new ideas. But unfortunately, he followed that enthusiasm with a room-silencing caveat: "Oh, and every new idea has to be patentable. And something we can manufacture." In that setting, nobody is going to suggest anything even remotely "wild." Try sending the boss out for coffee. Or doughnuts.
+
+2. EVERYBODY GETS A TURN
+I once sat in on a meeting a client thought was brainstorming. Sixteen people were packed into the room. We went clockwise around the table, and each person was given two minutes to speak. It was demo-cratic. It was painful. It was pointless. It definitely wasn't a brainstormer.
+
+3. EXPERTS ONLY PLEASE
+Let's see, do I have a materials expert, an engineer, a software guru, and the V.P. of marketing? In brainstorming, don't be an "expert" snob. Bring in someone from manufacturing, who knows how to build things. Invite a customer service rep with lots of field experience. Find someone who reads a lot of science fiction. They may not have the "right" degrees, but they just might have the insight you need.
+
+4. DO IT OFF-SITE
+Brainstorming at ski lodges and beach resorts can be counterproductive. Do you want your team members to think that creativity and inspiration only happen at high altitude or within walking distance of an ocean? Don't get me wrong: Off-sites are fine. But remember, you want the buzz of creativity to blow through your offices as regularly as a breeze at the beach.
+
+5. NO SILLY STUFF
+Sports utility shopping carts. Velcro diapers. A privacy curtain to hide those embarrassing purchases. These are just a few of the wacky ideas hatched during our Nightline shopping cart brainstormer. I can't emphasize enough what these flights of fancy do for the team. They remind everybody that this isn't like work, that anything goes, and that we're going to have a lot of fun while we solve our problems.
+
+6. WRITE DOWN EVERYTHING
+I recently encountered a senior manager who's very good at a lot of things, but very bad at brainstorming. What's his main fault? He writes everything down, and I mean everything. He seldom contributes any-thing useful. Taking notes shifts your focus to the wrong side of your brain. It's like trying to dance and type on your laptop at the same time. Sketch all you want, doodle to your heart's delight. But don't act as if you're in History 101.
+
+Ö.A brainstorm can feel like it's just another meeting, or it can be a fun, invigorating experience that can take a project or a team to a new level.
+</div>
+
+<div id="doc3">
+Thinking
+by Tim Brown
+
+THOMAS EDISON created the electric light-
+bulb and then wrapped an entire indus-
+try around it. The lightbulb is most often
+thought of as his signature invention, but
+Edison understood that the bulb was little more
+than a parlor trick without a system of electric power
+generation and transmission to make it truly useful.
+So he created that, too.
+Thus Edisonís genius lay in his ability to conceive
+of a fully developed marketplace, not simply a dis-
+crete device. He was able to envision how people
+would want to use what he made, and he engineered
+toward that insight. He wasnít always prescient (he
+originally believed the phonograph would be used mainly
+as a business machine for recording and replaying dictation),
+but he invariably gave great consideration to usersí needs and
+preferences.
+Edisonís approach was an early example of what is now
+called ìdesign thinkingî ñ a methodology that imbues the
+full spectrum of innovation activities with a human-centered
+design ethos. By this I mean that innovation is powered by a
+thorough understanding, through direct observation, of what
+people want and need in their lives and what they like or dis-
+like about the way particular products are made, packaged,
+marketed, sold, and supported.
+Many people believe that Edisonís greatest invention was
+the modern R&D laboratory and methods of experimental
+investigation. Edison wasnít a narrowly specialized scientist
+but a broad generalist with a shrewd
+business sense. In his Menlo Park, New
+Jersey, laboratory he surrounded himself
+with gifted tinkerers, improvisers, and
+experimenters. Indeed, he broke the
+mold of the ìlone genius inventorî by
+creating a team-based approach to in-
+novation. Although Edison biographers
+write of the camaraderie enjoyed by this
+merry band, the process also featured
+endless rounds of trial and error ñ the
+ì99% perspirationî in Edisonís famous
+definition of genius. His approach was
+intended not to validate preconceived hypotheses but to help
+experimenters learn something new from each iterative stab.
+Innovation is hard work; Edison made it a profession that
+blended art, craft, science, business savvy, and an astute under-
+standing of customers and markets.
+Design thinking is a lineal descendant of that tradition. Put
+simply, it is a discipline that uses the designerís sensibility and
+methods to match peopleís needs with what is technologically
+feasible and what a viable business strategy can convert into cus-
+tomer value and market opportunity. Like Edisonís painstaking
+innovation process, it often entails a great deal of perspiration.
+I believe that design thinking has much to offer a business
+world in which most management ideas and best practices are
+freely available to be copied and exploited. Leaders now look
+to innovation as a principal source of differentiation and com-
+petitive advantage; they would do well to incorporate design
+thinking into all phases of the process.
+
+Getting Beneath the Surface
+Historically, design has been treated as a downstream step in
+the development process ñ the point where designers, who
+have played no earlier role in the substantive work of in-
+novation, come along and put a beautiful wrapper around
+the idea. To be sure, this approach has stimulated market
+growth in many areas by making new products and technolo-
+gies aesthetically attractive and therefore more desirable to
+consumers or by enhancing brand perception through smart,
+evocative advertising and communication strategies. Dur-
+ing the latter half of the twentieth century design became
+an increasingly valuable competitive asset in, for example,
+the consumer electronics, automotive, and consumer pack-
+aged goods industries. But in most others it remained a late-
+stage add-on.
+Now, however, rather than asking designers to make an
+already developed idea more attractive to consumers, compa-
+nies are asking them to create ideas that better meet consum-
+ersí needs and desires. The former role is tactical, and results
+in limited value creation; the latter is strategic, and leads to
+dramatic new forms of value.
+Moreover, as economies in the developed world shift from
+industrial manufacturing to knowl-
+edge work and service delivery, inno-
+vationís terrain is expanding. Its ob-
+jectives are no longer just physical
+products; they are new sorts of pro-
+cesses, services, IT-powered interac-
+tions, entertainments, and ways of
+communicating and collaborating ñ
+exactly the kinds of human-centered
+activities in which design thinking
+can make a decisive difference. (See
+the sidebar ìA Design Thinkerís Per-
+sonality Profi le.î)
+Consider the large health care provider Kaiser Permanente,
+which sought to improve the overall quality of both patientsí
+and medical practitionersí experiences. Businesses in the ser-
+vice sector can often make signifi cant innovations on the front
+lines of service creation and delivery. By teaching design think-
+ing techniques to nurses, doctors, and administrators, Kaiser
+hoped to inspire its practitioners to contribute new ideas.
+Over the course of several months Kaiser teams participated
+in workshops with the help of my fi rm, IDEO, and a group of
+Kaiser coaches. These workshops led to a portfolio of innova-
+tions, many of which are being rolled out across the company.
+One of them ñ a project to reengineer nursing-staff shift
+changes at four Kaiser hospitals ñ perfectly illustrates both the
+broader nature of innovation ìproductsî and the value of a holis-
+tic design approach. The core project team included a strategist
+(formerly a nurse), an organizational-development specialist,
+a technology expert, a process designer, a union representative,
+and designers from IDEO. This group worked with innovation
+teams of frontline practitioners in each of the four hospitals.
+During the earliest phase of the project, the core team col-
+laborated with nurses to identify a number of problems in the
+way shift changes occurred. Chief among these was the fact
+that nurses routinely spent the fi rst 45 minutes of each shift at
+the nursesí station debriefi ng the departing shift about the sta-
+tus of patients. Their methods of information exchange were
+different in every hospital, ranging from recorded dictation to
+face-to-face conversations. And they compiled the information
+they needed to serve patients in a variety of ways ñ scrawling
+quick notes on the back of any available scrap of paper, for
+example, or even on their scrubs. Despite a signifi cant invest-
+ment of time, the nurses often failed to learn some of the
+things that mattered most to patients, such as how they had
+fared during the previous shift, which family members were
+with them, and whether or not certain tests or therapies had
+been administered. For many patients, the team learned, each
+shift change felt like a hole in their care. Using the insights
+gleaned from observing these important times of transition,
+the innovation teams explored potential solutions through
+brainstorming and rapid prototyping. (Prototypes of a service
+innovation will of course not be physical, but they must be
+tangible. Because pictures help us understand what is learned
+through prototyping, we often videotape the performance of
+prototyped services, as we did at Kaiser.)
+Prototyping doesnít have to be complex and expensive. In
+another health care project, IDEO helped a group of surgeons
+develop a new device for sinus surgery. As the surgeons de-
+scribed the ideal physical characteristics of the instrument,
+one of the designers grabbed a whiteboard marker, a fi lm
+canister, and a clothespin and taped them together. ìDo you
+mean like this?î he asked. With his rudimentary prototype in
+hand, the surgeons were able to be much more precise about
+what the ultimate design should accomplish.
+Prototypes should command only as much time, effort, and
+investment as are needed to generate useful feedback and
+evolve an idea. The more ìfi nishedî a prototype seems, the less
+likely its creators will be to pay attention to and profi t from
+feedback. The goal of prototyping isnít to fi nish. It is to learn
+about the strengths and weaknesses of the idea and to identify
+new directions that further prototypes might take.
+The design that emerged for shift changes had nurses pass-
+ing on information in front of the patient rather than at the
+nursesí station. In only a week the team built a working pro-
+totype that included new procedures and some simple soft-
+ware with which nurses could call up previous shift-change
+notes and add new ones. They could input patient informa-
+tion throughout a shift rather than scrambling at the end to
+pass it on. The software collated the data in a simple format
+customized for each nurse at the start of a shift. The result
+was both higher-quality knowledge transfer and reduced prep
+time, permitting much earlier and better-informed contact
+with patients.
+As Kaiser measured the impact of this change over time, it
+learned that the mean interval between a nurseís arrival and
+fi rst interaction with a patient had been more than halved,
+adding a huge amount of nursing time across the four hospi-
+tals. Perhaps just as important was the effect on the quality
+of the nursesí work experience. One nurse commented, ìIím
+an hour ahead, and Iíve only been here 45 minutes.î Another
+said, ì[This is the] fi rst time Iíve ever made it out of here at
+the end of my shift.î
+Thus did a group of nurses signifi cantly improve their pa-
+tientsí experience while also improving their own job satis-
+faction and productivity. By applying a human-centered
+design methodology, they were able to create a rela-
+tively small process innovation that produced an
+outsize impact. The new shift changes are being
+rolled out across the Kaiser system, and the ca-
+pacity to reliably record critical patient infor-
+mation is being integrated into an electronic
+medical records initiative at the company.
+What might happen at Kaiser if every
+nurse, doctor, and administrator in every
+hospital felt empowered to tackle problems
+the way this group did? To fi nd out, Kaiser
+has created the Garfi eld Innovation Center,
+which is run by Kaiserís original core team
+and acts as a consultancy to the entire or-
+ganization. The centerís mission is to pur-
+sue innovation that enhances the patient
+experience and, more broadly, to envision
+Kaiserís ìhospital of the future.î It is intro-
+ducing tools for design thinking across the
+Kaiser system.
+
+How Design Thinking Happens
+The myth of creative genius is resilient:
+We believe that great ideas pop fully
+formed out of brilliant minds, in feats of
+imagination well beyond the abilities of
+mere mortals. But what the Kaiser nursing
+team accomplished was neither a sudden
+breakthrough nor the lightning strike of
+genius; it was the result of hard work aug-
+mented by a creative human-centered discov-
+ery process and followed by iterative cycles of
+prototyping, testing, and refi nement.
+The design process is best described meta-
+phorically as a system of spaces rather than a pre-
+defi ned series of orderly steps. The spaces demar-
+cate different sorts of related activities that together
+form the continuum of innovation. Design thinking
+can feel chaotic to those experiencing it for the fi rst
+time. But over the life of a project participants come to
+see ñ as they did at Kaiser ñ that the process makes sense
+and achieves results, even though its architecture differs
+from the linear, milestone-based processes typical of other
+kinds of business activities.
+Design projects must ultimately pass through three spaces
+(see the exhibit at right). We label these ìinspiration,î for the
+circumstances (be they a problem, an opportunity, or both)
+that motivate the search for solutions; ìideation,î for the
+process of generating, developing, and testing ideas that may
+lead to solutions; and ìimplementation,î for the charting of a
+path to market. Projects will loop back through these spaces ñ
+particularly the fi rst two ñ more than once as ideas are refi ned
+and new directions taken.
+Sometimes the trigger for a project is leadershipís recogni-
+tion of a serious change in business fortunes. In 2004 Shimano,
+a Japanese manufacturer of bicycle components, faced fl at-
+tening growth in its traditional high-end road-racing and
+mountain-bike segments in the United States. The com-
+pany had always relied on technology innovations
+to drive its growth and naturally tried to predict
+where the next one might come from. This time
+Shimano thought a high-end casual bike that ap-
+pealed to boomers would be an interesting area
+to explore. IDEO was invited to collaborate on
+the project.
+During the inspiration phase, an inter-
+disciplinary team of IDEO and Shimano
+people ñ designers, behavioral scientists,
+marketers, and engineers ñ worked to
+identify appropriate constraints for the
+project. The team began with a hunch
+that it should focus more broadly than
+on the high-end market, which might
+prove to be neither the only nor even
+the best source of new growth. So it
+set out to learn why 90% of American
+adults donít ride bikes. Looking for new
+ways to think about the problem, the
+team members spent time with all kinds
+of consumers. They discovered that nearly
+everyone they met rode a bike as a child
+and had happy memories of doing so. They
+also discovered that many Americans are
+intimidated by cycling today ñ by the retail
+experience (including the young, Lycra-clad ath-
+letes who serve as sales staff in most independent
+bike stores); by the complexity and cost of the bikes,
+accessories, and specialized clothing; by the danger
+of cycling on roads not designed for bicycles; and by
+the demands of maintaining a technically sophisticated
+bike that is ridden infrequently.
+This human-centered exploration ñ which took its insights
+from people outside Shimanoís core customer base ñ led to
+the realization that a whole new category of bicycling might
+be able to reconnect American consumers to their experi-
+ences as children while also dealing with the root causes of
+their feelings of intimidation ñ thus revealing a large un-
+tapped market.
+The design team, responsible for every aspect of what was
+envisioned as a holistic experience, came up with the concept
+of ìCoasting.î Coasting would aim to entice lapsed bikers into
+an activity that was simple, straight-
+forward, and fun. Coasting bikes, built
+more for pleasure than for sport, would
+have no controls on the handlebars, no
+cables snaking along the frame. As on
+the earliest bikes many of us rode, the brakes would be applied
+by backpedaling. With the help of an onboard computer, a
+minimalist three gears would shift automatically as the bicy-
+cle gained speed or slowed. The bikes would feature comfort-
+ably padded seats, be easy to operate, and require relatively
+little maintenance.
+Three major manufacturers ñ Trek, Raleigh, and Giant ñ de-
+veloped new bikes incorporating innovative components from
+Shimano. But the design team didnít stop with the bike itself.
+In-store retailing strategies were created for independent bike
+dealers, in part to alleviate the discomfort that biking novices
+felt in stores designed to serve enthusiasts. The team devel-
+oped a brand that identifi ed Coasting as a way to enjoy life.
+(ìChill. Explore. Dawdle. Lollygag. First one thereís a rotten
+egg.î) And it designed a public relations campaign ñ in collabo-
+ration with local governments and cycling organizations ñ that
+identifi ed safe places to ride.
+Although many others became involved in the project
+when it reached the implementation phase, the application
+of design thinking in the earliest stages of innovation is what
+led to this complete solution. Indeed, the single thing one
+would have expected the design team
+to be responsible for ñ the look of the
+bikes ñ was intentionally deferred to
+later in the development process, when
+the team created a reference design to
+inspire the bike companiesí own design teams. After a success-
+ful launch in 2007, seven more bicycle manufacturers signed
+up to produce Coasting bikes in 2008.
+
+Taking a Systems View
+Many of the worldís most successful brands create break-
+through ideas that are inspired by a deep understanding of
+consumersí lives and use the principles of design to innovate
+and build value. Sometimes innovation has to account for
+vast differences in cultural and socioeconomic conditions. In
+such cases design thinking can suggest creative alternatives
+to the assumptions made in developed societies.
+Indiaís Aravind Eye Care System is probably the worldís
+largest provider of eye care. From April 2006 to March 2007
+Aravind served more than 2.3 million patients and performed
+more than 270,000 surgeries. Founded in 1976 by Dr. G. Venka-
+taswamy, Aravind has as its mission nothing less than the erad-
+ication of needless blindness among Indiaís population, includ-
+ing the rural poor, through the effective delivery of superior
+ophthalmic care. (One of the companyís slogans is ìQuality is
+for everyone.î) From 11 beds in Dr. Venkataswamyís home,
+Aravind has grown to encompass fi ve hos-
+pitals (three others are under Aravind
+management), a plant that manufac-
+tures ophthalmic products, a research
+foundation, and a training center.
+Aravindís execution of its mission and
+model is in some respects reminiscent of Edisonís holistic con-
+cept of electric power delivery. The challenge the company
+faces is logistic: how best to deliver eye care to populations far
+removed from the urban centers where Aravindís hospitals are
+located. Aravind calls itself an ìeye care systemî for a reason:
+Its business goes beyond ophthalmic care per se to transmit
+expert practice to populations that have historically lacked ac-
+cess. The company saw its network of hospitals as a beginning
+rather than an end.
+Much of its innovative energy has focused on bringing both
+preventive care and diagnostic screening to the countryside.
+Since 1990 Aravind has held ìeye campsî in Indiaís rural ar-
+eas, in an effort to register patients, administer eye exams,
+teach eye care, and identify people who may require surgery
+or advanced diagnostic services or who have conditions that
+warrant monitoring.
+In 2006 and early 2007 Aravind eye camps screened more
+than 500,000 patients, of whom nearly 113,000 required surgery.
+Access to transportation is a common problem in rural areas, so
+the company provides buses that take patients needing further
+treatment to one of its urban facilities
+and then home again. Over the years it
+has bolstered its diagnostic capabilities
+in the fi eld with telemedicine trucks,
+which enable doctors back at Aravindís
+hospitals to participate in care decisions.
+In recent years Aravindís analysis of its screening data has led
+to specialized eye camps for certain demographic groups, such
+as school-age children and industrial and government workers;
+the company also holds camps specifi cally to screen for eye
+diseases associated with diabetes. All these services are free for
+the roughly 60% of patients who cannot afford to pay.
+In developing its system of care, Aravind has consistently
+exhibited many characteristics of design thinking. It has used
+as a creative springboard two constraints: the poverty and
+remoteness of its clientele and its own lack of access to expen-
+sive solutions. For example, a pair of intraocular lenses made
+in the West costs $200, which severely limited the number of
+patients Aravind could help. Rather than try to persuade sup-
+pliers to change the way they did things, Aravind built its own
+solution: a manufacturing plant in the basement of one of its
+hospitals. It eventually discovered that it could use relatively
+inexpensive technology to produce lenses for $4 a pair.
+Throughout its history ñ defi ned by the constraints of poverty,
+ignorance, and an enormous unmet need ñ Aravind has built
+a systemic solution to a complex social and medical problem.
+
+Getting Back to the Surface
+I argued earlier that design thinking can lead to innovation
+that goes beyond aesthetics, but that doesnít mean that form
+and aesthetics are unimportant. Magazines like to publish
+photographs of the newest, coolest products for a reason: They
+are sexy and appeal to our emotions. Great design satisfi es
+both our needs and our desires. Often the emotional connec-
+tion to a product or an image is what engages us in the fi rst
+place. Time and again we see successful products that were
+not necessarily the fi rst to market but were the fi rst to appeal
+to us emotionally and functionally. In other words, they do
+the job and we love them. The iPod was not the fi rst MP3
+player, but it was the fi rst to be delightful. Targetís products
+appeal emotionally through design and functionally through
+price ñ simultaneously.
+This idea will grow ever more important in the future. As
+Daniel Pink writes in his book A Whole New Mind, ìAbundance
+has satisfi ed, and even over-satisfi ed, the material needs of
+millions ñ boosting the signifi cance of beauty and emotion
+and accelerating individualsí search for meaning.î As more of
+our basic needs are met, we increasingly expect sophisticated
+experiences that are emotionally satisfying and meaningful.
+These experiences will not be simple products. They will be
+complex combinations of products, services, spaces, and infor-
+mation. They will be the ways we get educated, the ways we
+are entertained, the ways we stay healthy, the ways we share
+and communicate. Design thinking is a tool for imagining
+these experiences as well as giving them a desirable form.
+One example of experiential innovation comes from a fi nan-
+cial services company. In late 2005 Bank of America launched
+a new savings account service called ìKeep the Change.î IDEO,
+working with a team from the bank, helped iden-
+tify a consumer behavior that many people will
+recognize: After paying cash for something, we put
+the coins we received in change into a jar at home.
+Once the jar is full, we take the coins to the bank
+and deposit them in a savings account. For many
+people, itís an easy way of saving. Bank of Americaís
+innovation was to build this behavior into a debit
+card account. Customers who use their debit cards
+to make purchases can now choose to have the total
+rounded up to the nearest dollar and the difference
+deposited in their savings accounts.
+The success of this innovation lay in its appeal to
+an instinctive desire we have to put money aside in a
+painless and invisible way. Keep the Change creates
+an experience that feels natural because it models
+behavior that many of us already exhibit. To be sure,
+Bank of America sweetens the deal by matching
+100% of the change saved in the fi rst three months
+and 5% of annual totals (up to $250) thereafter. This
+encourages customers to try it out. But the real pay-
+off is emotional: the gratifi cation that comes with
+monthly statements showing customers theyíve saved money
+without even trying.
+In less than a year the program attracted 2.5 million custom-
+ers. It is credited with 700,000 new checking accounts and a
+million new savings accounts. Enrollment now totals more than
+5 million people who together have saved more than $500 mil-
+lion. Keep the Change demonstrates that design thinking can
+identify an aspect of human behavior and then convert it into
+both a customer benefi t and a business value.
+Thomas Edison represents what many of us think of as a
+golden age of American innovation ñ a time when new ideas
+transformed every aspect of our lives. The need for transfor-
+mation is, if anything, greater now than ever before. No mat-
+ter where we look, we see problems that can be solved only
+through innovation: unaffordable or unavailable health care,
+billions of people trying to live on just a few dollars a day,
+energy usage that outpaces the planetís ability to support it,
+education systems that fail many students, companies whose
+traditional markets are disrupted by new technologies or de-
+mographic shifts. These problems all have people at their heart.
+They require a human-centered, creative, iterative, and practi-
+cal approach to fi nding the best ideas and ultimate solutions.
+Design thinking is just such an approach to innovation.
+</div>
+</div>
+<!-- END HIDDEN BOOKSHELF CONTENT -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../external/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../external/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../external/drawingboard/drawingboard.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/content.js"></script>
+    <!-- Bookshelf related JS -->
+    <script src="js/lunr.min.js"></script>
+    <script src="js/jquery.typing-0.2.0.min.js"></script>
+    <script src="js/bookshelf.js"></script>
+
+</body>
+</html>

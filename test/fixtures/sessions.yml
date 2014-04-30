@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  rating: 1
+  comments: MyString
+  user_id: 
+  lesson_id: 
+
+two:
+  status: MyString
+  rating: 1
+  comments: MyString
+  user_id: 
+  lesson_id: 

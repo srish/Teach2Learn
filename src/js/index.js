@@ -52,6 +52,18 @@ $(function() {
         scrollTo(nextTaskNum);
     });
     
+    // Advancing back to a prev lesson point
+    $('#prev-lesson-button').on('click', function(){
+    
+        var prevTaskNum = $('#navigation li.current').index() - 1
+        
+        if(prevTaskNum > 0){
+            goToTask(prevTaskNum);
+            // Lastly, scroll the navigation so that the point stays in view
+            scrollTo(prevTaskNum);
+        }
+    });
+    
     $('#navigation li .fa').on('click', function(){
         // If the parent container is already selected, we do not do anything
         if($(event.target).parent().parent().hasClass('current')){

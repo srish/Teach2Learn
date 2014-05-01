@@ -111,6 +111,25 @@
     cursor:default;
 }
 
+.next-lesson button{
+    margin-top:5px;
+}
+
+#prev-lesson-button{
+    width: 40px;
+}
+
+#next-lesson-button{
+    width: 130px;
+    margin-left: 10px;
+    
+}
+
+.next-lesson .panel_wrapper{
+    padding: 0;
+    padding-top: 20px;
+}
+
 #handshake-button{
     display:none;
 }

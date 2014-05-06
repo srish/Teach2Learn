@@ -127,11 +127,13 @@
 
 .next-lesson .panel_wrapper{
     padding: 0;
-    padding-top: 20px;
+    padding-top: 22px;
 }
 
 #handshake-button{
     display:none;
+    width: 130px;
+    margin-left: 10px;
 }
 
 .panel-container{
@@ -223,10 +225,16 @@ a:hover {
 }
 
 /* Workspace - Drawing Board Area */ 
+
 #board {
     width: 100%;
     height: 100%;
     overflow: auto;
+}
+
+#board .drawing-board-controls {
+    left: 0;
+    width: 100%;
 }
 
 

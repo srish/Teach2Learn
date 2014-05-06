@@ -174,12 +174,10 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
             <div class="col-md-6 panel">
                 <div class="panel_wrapper">
                     <div id="video-chooser" class="col-md-2">
-                        <img id="video-1" class="video-capture-mini video-border" src="static/google-hangout-1.png"><br/>
-                        <img id="video-2" class="video-capture-mini" src="static/google-hangout-2.jpg" ><br/>
-                        <img id="video-3" class="video-capture-mini" src="static/google-hangout-3.jpg">
+                        <video width="100%" id="localStream"></video>
                     </div>
                     <div id="video" class="col-md-4">
-                        <img class="video-capture-max" src="static/google-hangout-1.png">
+                        <canvas height="100%" id="focusedStream"></cavnas>
                     </div>
                 </div>
             </div>
@@ -985,6 +983,9 @@ Design thinking is just such an approach to innovation.
     <script src="js/lunr.min.js"></script>
     <script src="js/jquery.typing-0.2.0.min.js"></script>
     <script src="js/bookshelf.js"></script>
+    <!-- Webcam -->
+    <script src="js/webrtc.js"></script>
+    <script src="js/webcam.js"></script>
 
 </body>
 </html>

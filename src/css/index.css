@@ -255,3 +255,9 @@ a:hover {
 #video-chooser {
     width: 20%;
 }
+#thumbnails {
+    width: 100%;
+}
+.toggle {
+    width: 40px;
+}

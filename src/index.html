@@ -177,7 +177,14 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
             <div class="col-md-6 panel">
                 <div class="panel_wrapper">
                     <div id="video-chooser" class="col-md-2">
-                        <video width="100%" id="localStream"></video>
+                        <div>
+                            <button class="btn video toggle"><i class="fa fa-eye-slash video"></i></button>
+                            <button class="btn mute toggle"><i class="fa fa-microphone-slash mute"></i></button>
+                        </div>
+                        <br/>
+                        <div id="thumbnails">
+                            <video width="100%" id="localStream"></video>
+                        </div>
                     </div>
                     <div id="video" class="col-md-4">
                         <canvas height="100%" id="focusedStream"></cavnas>

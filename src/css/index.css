@@ -141,6 +141,15 @@
 }
 
 .panel-row{
+    height: 100%;
+}
+
+.panel-row > div{
+    height:100%;
+    padding: 0;
+}
+
+.first-col .panel{
     height: 50%;
 }
 

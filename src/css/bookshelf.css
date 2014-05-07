@@ -29,3 +29,7 @@
 .bookshelf_match {
     //color:#2f75b4;
 }
+
+#bookshelf{
+    display: none;
+}

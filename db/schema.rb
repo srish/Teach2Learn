@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430020742) do
+ActiveRecord::Schema.define(version: 20140508033417) do
 
   create_table "lesson_plans", force: true do |t|
     t.string   "title"
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20140430020742) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "parent_lesson_id"
   end
+
+  add_index "lessons", ["parent_lesson_id"], name: "index_lessons_on_parent_lesson_id"
 
   create_table "session_attendances", force: true do |t|
     t.integer  "rating"

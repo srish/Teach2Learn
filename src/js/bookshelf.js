@@ -113,3 +113,16 @@ $('#bookshelf_search').typing({
     }
 });
 
+// Logic for the display and hiding of the bookshelf
+$(function (){
+
+    $('#bookshelf-toggle').on('click', function(){
+        $('.bookshelf-row').slideToggle();
+        $('#bookshelf-button-wrapper .down').toggle();
+        $('#bookshelf-button-wrapper .up').toggle();
+    });
+
+
+
+});
+

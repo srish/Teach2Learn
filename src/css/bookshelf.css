@@ -29,3 +29,41 @@
 .bookshelf_match {
     //color:#2f75b4;
 }
+
+.bookshelf-container{
+    margin-left: 2.5%;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+}
+
+#bookshelf{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 0;
+    box-shadow: 0 0 30px gray;
+}
+
+#bookshelf-button-wrapper{
+    width: 24%;
+    margin: auto;
+    background-color: white;
+    border: 1px solid black;
+    height: 48px;
+    padding: 7px;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 0;
+}
+
+#bookshelf-button-wrapper .down{
+    display:none;
+}
+
+.bookshelf-row{
+    display:none;
+}
+
+#bookshelf-tab{
+
+}

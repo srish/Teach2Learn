@@ -141,6 +141,15 @@
 }
 
 .panel-row{
+    height: 100%;
+}
+
+.panel-row > div{
+    height:100%;
+    padding: 0;
+}
+
+.first-col .panel{
     height: 50%;
 }
 
@@ -229,12 +238,59 @@ a:hover {
 #board {
     width: 100%;
     height: 100%;
-    overflow: auto;
+    z-index: 1;
 }
 
 #board .drawing-board-controls {
-    left: 0;
     width: 100%;
+    left: 0;
+}
+
+#board .drawing-board-control{
+    text-align: left;
+    position: absolute;
+}
+
+#board .drawing-board-control-colors{
+    left:0;
+}
+
+#board .drawing-board-control-navigation{
+    text-align: right;
+    right:0;
+}
+
+#board .drawing-board-control-drawingmode{
+    left: 34px;
+}
+
+#board .drawing-board-control-size{
+    left: 129px;
+}
+
+#board .drawing-board-control-navigation>button:last-child {
+    margin-left: 20px;
+}
+
+/* File Uploader CSS */
+
+#file-uploader{
+    position:absolute;
+    height: 28px;
+    padding-top: 3px;
+    overflow: hidden;
+    width: 170px;
+    right: 170px;
+    z-index: 2;
+    text-align: left;
+}
+
+#file-uploader label, #file-uploader input{
+    position: absolute;
+}
+
+#file-uploader input{
+    left: 90px;
 }
 
 

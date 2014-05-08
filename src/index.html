@@ -320,12 +320,29 @@ Authors: Paruku Paerhati, Jerry Chiang, Marcus Braun, Srishti Sethi
             </div>
         </div>
     </div>
-
-    <div class="col-md-6 panel" id="bookshelf">
-        <div class="panel_wrapper">
-            <input id="bookshelf_search" type="text" placeholder="Search Reference Materials"></input>
-            <table id="bookshelf_table">
-            </table>
+    <div class="container bookshelf-container">
+        <div class="row tab-row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6" id="bookshelf-tab">
+                <div id="bookshelf-button-wrapper">
+                    <button class = "btn" id="bookshelf-toggle">
+                        Slide BookShelf <i class="up fa fa-arrow-circle-up"></i>
+                        <i class="down fa fa-arrow-circle-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row bookshelf-row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div id="bookshelf">
+                    <div class="panel_wrapper" id="bookshelf_panel">
+                        <input id="bookshelf_search" type="text" placeholder="Search Reference Materials"></input>
+                        <table id="bookshelf_table">
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

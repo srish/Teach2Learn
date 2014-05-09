@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :tutor %><br>
+    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :lesson %><br>
+    <%= f.collection_select(:lesson_id, Lesson.all, :id, :name) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

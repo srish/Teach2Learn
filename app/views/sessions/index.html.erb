@@ -3,6 +3,9 @@
 <table>
   <thead>
     <tr>
+      <th>Tutor</th>
+      <th>Lesson</th>
+      <th>Status</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +15,9 @@
   <tbody>
     <% @sessions.each do |session| %>
       <tr>
+        <td><%= session.tutor.name %></td>
+        <td><%= session.lesson.name %></td>
+        <td><%= session.status %></td>
         <td><%= link_to 'Show', session %></td>
         <td><%= link_to 'Edit', edit_session_path(session) %></td>
         <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,4 +1,8 @@
 Teach2Learn::Application.routes.draw do
+  resources :sessions
+
+  resources :lesson_plans
+
   resources :lessons
 
   resources :users

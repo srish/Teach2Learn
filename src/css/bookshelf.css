@@ -56,6 +56,10 @@
     border-bottom: 0;
 }
 
+#bookshelf-toggle{
+    width: 100%;
+}
+
 #bookshelf-button-wrapper .down{
     display:none;
 }

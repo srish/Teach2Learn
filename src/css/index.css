@@ -116,11 +116,11 @@
 }
 
 #prev-lesson-button{
-    width: 40px;
+    width: 20%;
 }
 
 #next-lesson-button{
-    width: 130px;
+    width: 60%;
     margin-left: 10px;
     
 }
@@ -132,7 +132,7 @@
 
 #handshake-button{
     display:none;
-    width: 130px;
+    width: 60%;
     margin-left: 10px;
 }
 
@@ -199,6 +199,8 @@ h3 {
     color: white;
     border: 1px solid #2f75b4;
     vertical-align: middle;
+    padding-left:0;
+    padding-right:0;
 }
 
 .btn:hover{
@@ -280,7 +282,7 @@ a:hover {
     padding-top: 3px;
     overflow: hidden;
     width: 170px;
-    right: 170px;
+    left: 230px;
     z-index: 2;
     text-align: left;
 }

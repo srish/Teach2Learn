@@ -36,8 +36,12 @@ $(function() {
     });
     // join the room on the signaling server
     webrtc.on('readyToCall', function () {
-        // you can name it anything
-        webrtc.joinRoom('teach2learn');
+        var name = getRoomName('id');
+        if (!name) {
+            webrtc.joinRoom('teach2learn');
+        } else {
+            webrtc.joinRoom(name);
+        }
     });
     $('.video').click(function (e) {
         var $target = $('.btn.video');
@@ -114,4 +118,16 @@ function capture(video, mirror) {
      if (mirror) {
          context.restore();
      }
+}
+/*
+ * Function for reading the chat room id off the URL
+ * http://www.jquery4u.com/snippets/url-parameters-jquery/
+ */
+getRoomName = function(param){
+    var results = new RegExp('[\\?&amp;]' + param + '=([^&amp;#]*)').exec(window.location.href);
+    if (results == null) {
+        return 0;
+    } else {
+        return results[1] || 0;
+    }
 }
